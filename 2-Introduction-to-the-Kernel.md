@@ -190,7 +190,7 @@ Conceptually, there is no difference between system administrative processes and
 ## System calls - Also there in appendix of book
 
 |GENERAL CLASS       |       SPECIFIC CLASS          |       SYSTEM CALL|
-|     -----------------------------------------------|----------------------|
+|     -----------------|------------------------------|----------------------|
 |     File Structure   |	Creating a Channel    |         creat()|
 |     Related Calls    |                              |           open()|
 |                      |                              |           close()|
@@ -207,7 +207,6 @@ Conceptually, there is no difference between system administrative processes and
 |                      |                               |          chown()|
 |                      |                               |          umask()|
 |                      |          Device Control       |          ioctl()|
-|     -----------------|-------------------------------|---------------------|
 |     Process Related  |          Process Creation and  |         exec()|
 |     Calls            |         Termination            |        fork()|
 |                      |                                 |       wait()|
@@ -222,16 +221,13 @@ Conceptually, there is no difference between system administrative processes and
 |                      |                                 |        kill()|
 |                      |                                 |        alarm()|
 |                      |          Change Working Directory|       chdir()|
-|     -----------------|-----------------------------------|------------------|
-|     Interprocess     |          Pipelines                      pipe()|
-|     Communication    |          Messages                       msgget()|
-|                      |                                         msgsnd()|
-|                      |                                         msgrcv()|
-|                      |                                         msgctl()|
-|                      |          Semaphores                     semget()|
-|                      |                                         semop()|
-|                      |          Shared Memory                  shmget()|
-|                      |                                         shmat()|
-|                      |                                         shmdt()|
-|     -----------------|-----------------------------------------------------|
-
+|     Interprocess     |          Pipelines                |      pipe()|
+|     Communication    |          Messages                 |      msgget()|
+|                      |                                   |      msgsnd()|
+|                      |                                   |     msgrcv()|
+|                      |                                   |      msgctl()|
+|                      |          Semaphores               |      semget()|
+|                      |                                   |      semop()|
+|                      |          Shared Memory            |      shmget()|
+|                      |                                   |      shmat()|
+|                      |                                   |      shmdt()|

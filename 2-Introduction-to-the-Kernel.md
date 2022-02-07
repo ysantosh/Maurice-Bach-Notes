@@ -186,3 +186,52 @@ This decision was taken to make the kernel code simple. But the disadvantage is 
 ## System Administration
 
 Conceptually, there is no difference between system administrative processes and user processes. It's just that the system administrative processes have more rights and privileges. Internally, the kernel distinguishes a special user called the *superuser*. A user may become a superuser by going through a login-password sequence or by executing special programs.
+
+## System calls - Also there in appendix of book
+
+|GENERAL CLASS       |       SPECIFIC CLASS          |       SYSTEM CALL|
+|     -----------------------------------------------|----------------------|
+|     File Structure   |	Creating a Channel    |         creat()|
+|     Related Calls    |                              |           open()|
+|                      |                              |           close()|
+|                      |          Input/Output        |           read()|
+|                      |                              |           write()|
+|                      |         Random Access        |          lseek()|
+|                      |          Channel Duplication |           dup()|
+|                      |          Aliasing and Removing|          link()|
+|                      |          Files                |          unlink()|
+|                      |          File Status          |          stat()|
+|                      |                               |          fstat()|
+|                      |          Access Control       |          access()|
+|                      |                               |          chmod()|
+|                      |                               |          chown()|
+|                      |                               |          umask()|
+|                      |          Device Control       |          ioctl()|
+|     -----------------|-------------------------------|---------------------|
+|     Process Related  |          Process Creation and  |         exec()|
+|     Calls            |         Termination            |        fork()|
+|                      |                                 |       wait()|
+|                      |                                 |        exit()|
+|                      |          Process Owner and Group |       getuid()|
+|                      |                                  |       geteuid()|
+|                      |                                  |       getgid()|
+|                      |                                 |       getegid()|
+|                      |         Process Identity        |       getpid()|
+|                      |                                 |       getppid()|
+|                      |          Process Control        |        signal()|
+|                      |                                 |        kill()|
+|                      |                                 |        alarm()|
+|                      |          Change Working Directory|       chdir()|
+|     -----------------|-----------------------------------|------------------|
+|     Interprocess     |          Pipelines                      pipe()|
+|     Communication    |          Messages                       msgget()|
+|                      |                                         msgsnd()|
+|                      |                                         msgrcv()|
+|                      |                                         msgctl()|
+|                      |          Semaphores                     semget()|
+|                      |                                         semop()|
+|                      |          Shared Memory                  shmget()|
+|                      |                                         shmat()|
+|                      |                                         shmdt()|
+|     -----------------|-----------------------------------------------------|
+
